@@ -1,0 +1,12 @@
+;FLAVOR:Marlin
+M105
+M109 S0
+; Ender 3 Custom Start G-code
+G28 ; Home all axes
+G0 Z10.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
+;G0 X0.1 Y50 Z10 F5000.0 ; Move to start position
+;G0 X0.1 Y50 Z0.3 F5000.0 ; Move to start position
+;G0 X0.1 Y200.0 Z0.3 F1500.0 ; Draw the first line
+;G0 Z10.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
+
+M107

@@ -1,0 +1,13 @@
+M107
+G91 ;Relative positioning
+G0 Z10 F2400 ;Retract and raise Z
+G90 ;Absolute positioning
+
+G0 X0 Y220 ;Present print
+M106 S0 ;Turn-off fan
+M104 S0 ;Turn-off hotend
+M140 S0 ;Turn-off bed
+
+M84 X Y E ;Disable all steppers but Z
+
+;End of Gcode
