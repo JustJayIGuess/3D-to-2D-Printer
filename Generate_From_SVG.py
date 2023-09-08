@@ -21,6 +21,21 @@ paths = []  # Stores all strokes [stroke1, stroke2, etc] where stroke1 = [point1
 
 answer_dict = {"y": True, "yes": True, "n": False, "no": False}
 
+
+
+def create_grid_matrix(side_count: int):
+    grid = np.zeros((side_count ** 2, side_count ** 2))
+    for i in range(side_count ** 2 - 1):
+        grid[i][i+1] = int((i % side_count) != (side_count - 1))
+        grid[i+1][i] = grid[i][i+1]
+    for i in range(side_count ** 2 - side_count):
+        grid[i][i+side_count] = 1
+        grid[i+side_count][i] = 1
+    print(grid)
+
+create_grid_matrix(4)
+
+
 print("Use https://shinao.github.io/PathToPoints/ to convert SVG to a points list compatible with this program.")
 import_file = input("Import File: ")
 speed = round(float(input("Speed (mm/s): ")) * 60)
